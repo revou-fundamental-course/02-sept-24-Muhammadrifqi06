@@ -1,4 +1,8 @@
 /* ini css */
+#parallelogramContent {
+  display: none;
+}
+/* Segitiga */
 .main-header {
   text-align: center;
 }
@@ -10,19 +14,19 @@
 
 .selection-btn {
   height: 32px;
-  border: none;
   border-radius: 8px;
 }
 
-.bisque-color {
+/* .bisque-color {
   background-color: bisque;
 }
 
 .aqua-color {
   background-color: white;
-}
+} */
 
-.luas-segitiga-header {
+.luas-segitiga-header,
+.keliling-segitiga-header {
   border: 1px solid;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -31,12 +35,14 @@
   text-align: center;
 }
 
-.luas-segitiga-content {
+.luas-segitiga-content,
+.keliling-segitiga-content {
   display: flex;
   flex-direction: column;
 }
 
-.luas-segitiga-img {
+.luas-segitiga-img,
+.keliling-segitiga-img {
   height: 380px;
   width: 400px;
   background-image: url(https://imgix2.ruangguru.com/assets/miscellaneous/jpg_qpow4f_3242.jpg);
@@ -45,7 +51,7 @@
   align-self: center;
 }
 
-.luas-segitiga-form {
+.keliling-segitiga-form {
   text-align: center;
 }
 
@@ -76,4 +82,63 @@ select {
 
 .main-content > aside {
   flex: 1;
+}
+
+/* Jajar Genjang */
+/* Button style hover */
+#showTriangle:hover,
+#showParallelogram:hover {
+  background-color: rgb(105, 211, 131);
+}
+
+/* Input */
+.input-wrapper {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input-wrapper > input {
+  width: 50%;
+}
+
+input[type='number'],
+select {
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.main-content {
+  display: flex;
+}
+
+.main-content > aside {
+  flex: 1;
+}
+
+/* Reset */
+#resetButton {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  padding: 10px 20px;
+  border: none;
+  font-size: 16px;
+}
+
+#resetButton:hover {
+  background-color: rgb(105, 211, 131);
+}
+
+/* Responsive */
+@media only screen and (max-width: 600px) {
+  .main-content {
+    display: flex;
+    flex-direction: column;
+  }
 }

@@ -14,11 +14,12 @@
 
     <main>
       <section class="selection-content">
-        <button href="#" type="button" class="selection-btn bisque-color">Segitiga</button>
-        <button href="#" type="button" class="selection-btn aqua-color">Jajar Genjang</button>
+        <button type="button" class="selection-btn" id="showTriangle">Segitiga</button>
+        <button type="button" class="selection-btn" id="showParallelogram">Jajargenjang</button>
       </section>
 
       <section class="main-content">
+        <!-- Luas Segitiga -->
         <aside>
           <header>
             <h1 class="luas-segitiga-header">Luas Segitiga</h1>
@@ -27,10 +28,18 @@
           <article class="luas-segitiga-content">
             <div class="luas-segitiga-img"></div>
             <p>Rumus Luas Segitiga</p>
+            <p>L = 1/2 x Alas x Tinggi</p>
+            <p>dimana :</p>
+            <ul>
+              <li>1/2 = Rumus</li>
+              <li>L = Luas</li>
+              <li>a = Alas</li>
+              <li>t = Tinggi</li>
+            </ul>
           </article>
           <hr />
 
-          <form>
+          <form id="formLuas">
             <header>
               <h1 class="luas-segitiga-form">Hitung Luas Segitiga</h1>
             </header>
@@ -45,42 +54,58 @@
               <input id="tinggi" type="number" />
             </div>
 
-            <p id="result">Hasil Perhitungan</p>
-            <button>Hitung</button>
+            <p id="resultLuas">Hasil Perhitungan:</p>
+            <button type="button" onclick="hitungLuas()">Hitung</button>
+            <button type="button" id="resetButton">Reset</button>
           </form>
         </aside>
 
+        <!-- Keliling Segitiga -->
         <aside>
           <header>
-            <h1 class="luas-segitiga-header">Luas Segitiga</h1>
+            <h1 class="keliling-segitiga-header">Keliling Segitiga</h1>
           </header>
 
-          <article class="luas-segitiga-content">
-            <div class="luas-segitiga-img"></div>
-            <p>Rumus Luas Segitiga</p>
+          <article class="keliling-segitiga-content">
+            <div class="keliling-segitiga-img"></div>
+            <p>Rumus Keliling Segitiga:</p>
+            <p>K = S1 + S2 + S3</p>
+            <p>dimana:</p>
+            <ul>
+              <li>K = keliling</li>
+              <li>S1 = Sisi A</li>
+              <li>S2 = Sisi B</li>
+              <li>S3 = Sisi C</li>
+            </ul>
           </article>
           <hr />
 
-          <form>
+          <form id="formkeliling">
             <header>
-              <h1 class="luas-segitiga-form">Hitung Luas Segitiga</h1>
+              <h1 class="keliling-segitiga-form">Hitung Keliling Segitiga</h1>
             </header>
 
             <div class="input-wrapper">
-              <label for="panjang-alas">Panjang Alas:</label>
-              <input id="panjang-alas" type="number" />
+              <label for="SisiA">Sisi A:</label>
+              <input id="SisiA" type="number" />
             </div>
 
             <div class="input-wrapper">
-              <label for="tinggi">Tinggi:</label>
-              <input id="tinggi" type="number" />
+              <label for="SisiB">Sisi B:</label>
+              <input id="SisiB" type="number" />
             </div>
 
-            <p id="result">Hasil Perhitungan</p>
-            <button>Hitung</button>
+            <div class="input-wrapper">
+              <label for="SisiC">Sisi C:</label>
+              <input id="SisiC" type="number" />
+            </div>
+
+            <p id="resultkeliling">Keliling Segitiga yaitu:</p>
+            <button type="button" onclick="hitungkeliling()">Hitung</button>
           </form>
         </aside>
       </section>
     </main>
+    <script src="js\script.js"></script>
   </body>
 </html>
